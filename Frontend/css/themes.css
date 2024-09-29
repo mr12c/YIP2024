@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+    --top-position: 50vh;
+}
+
+/* General reset and typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body, input {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 62.5%; /* Base font size set for easier rem calculation */
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(60, 0, 78, 0.7);
+}
+
+/* Navbar styling */
+nav {
+    max-width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D0EBEA;
+    z-index: 99;
+    position: sticky;
+    top: 0;
+    height: auto;
+    width: 100vw;
+}
+
+.navbar-brand img {
+    height: 35px;
+    width: 30px;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.link a:hover {
+    color: #06aa79;
+}
+
+/* Themes section */
+.themes-wrapper {
+    width: 95%;
+    background: linear-gradient(#E0F2F1, #570369);
+    position: relative;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 5rem rgba(255, 255, 255, 0.5);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.themes-header h1 {
+    font-size: 4.5rem;
+    font-weight: 500;
+    color: #262f39;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.6rem;
+    /* padding-bottom: 2rem; */
+}
+
+.themes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    display: flex;
+    transition: all 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+.slide {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    /* padding: 1rem; */
+}
+
+.slide-bg {
+    display: none; /* Hide background for smaller screens */
+}
+
+.slide-content {
+    background-color: #D0EBEA;
+    padding: 2rem;
+    border-radius: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slide-img {
+    width: 100%;
+    max-width: 30rem;
+    height: auto;
+}
+
+.slide-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.slide-text {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.slide-text h3 {
+    font-size: 2.8rem;
+    color: #111;
+    margin-bottom: 1rem;
+}
+
+.slide-text p {
+    font-size: 1.6rem;
+    color: rgb(30, 40, 35);
+    line-height: 1.6;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.controls i {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 1rem;
+    opacity: 0.8;
+}
+
+.dots {
+    display: flex;
+    gap: 1rem;
+}
+
+.dots span {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #728f9e;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots span.active {
+    background-color: #fff;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    /* padding: 1rem; */
+    font-size: small;
+    background-color: rgb(54, 210, 54);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive CSS */
+@media (max-width: 1024px) {
+    .slide-text h3 {
+        font-size: 2.5rem;
+    }
+
+    .slide-text p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav__links {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .slide-content {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .slide-text h3 {
+        font-size: 2.2rem;
+    }
+
+    .slide-text p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav__links {
+        font-size: 1.2rem;
+    }
+
+    .themes-wrapper {
+        width: 100%;
+    }
+
+    .slide-content {
+        padding: 1rem;
+    }
+
+    .slide-text h3 {
+        font-size: 2rem;
+    }
+
+    .slide-text p {
+        font-size: 1.2rem;
+    }
+
+    .controls i {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .dots span {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+}
+
+.controls i {
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
+    opacity: 0.4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    /* color: #444; */
+    position: absolute;
+    bottom: 0.5%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .controls i img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+  }
+
+  .controls i:nth-child(1) {
+    left: 12%;
+  }
+  
+  .controls i:nth-child(2) {
+    right: 12%;
+  }
+  
+  .controls i:hover{
+    background-color: #26A69A;
+    transition: background-color 1s ease-in-out;
+  }
+  
+  
+  .dots {
+    position: absolute;
+    bottom: 6.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+  }
+  
+  .dots span {
+    width: 1rem;
+    height: 1rem;
+    background-color: #728f9e;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    cursor: pointer;
+  }
+  
+  .dots span.active {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #fff;
+  }

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/auth.css"/>
+    <link rel="icon" href="public/assets/images/yip-logo.png">
+  </head>     
+  <body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-icon-box">
+                <a href="https://www.iitkgp.ac.in/" target="_blank"><img src="public/assets/images/iit-kgp-logo.png" alt=""></a>
+                <a href="http://barc.iitkgp.ac.in/" target="_blank"><img src="public/assets/images/sbrc-logo.jpg" alt=""></a>
+                <a href="https://yip2025.netlify.app/" target="_blank"><img src="public/assets/images/yip-logo.png" alt=""></a>
+            </div>
+            <div class="yip">YIP 2024</div>
+            <div class="nav-link">
+                <a href="index.html">Home</a>
+                <a href="#" target="_blank">Instructions</a>
+            </div>
+
+        </div>
+        
+    </nav><br>
+    <h1>Young Innovators' Program 2024 Registration</h1>
+    <section id="instructions">
+        <div class="instruction">
+            <p>Kindly read the <a href="#">instructions</a> before filling out the registration form</p><br>
+            <input type="checkbox" id="read-checkbox" name="read-checkbox"><label for="instruct-read">&nbsp;I have read the instructions</label>
+        </div>
+    </section>
+   
+    <section class="container">
+      <header>Registration Form</header>
+      <form action="#" class="form">
+        <div class="school-details info-block">
+            <h3>School Details <section class="asterics"> *</section></h3>
+            <div class="input-box">
+                <label>School Name:</label>
+                <input type="text" placeholder="Enter school's name" name="school-name" required />
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label>School Email Address: </label><br>
+                    <input type="email" placeholder="Enter school's email address" name="school-email" required />
+                </div>
+                <div class="input-box">
+                    <label>School Contact Number:</label><br>
+                    <input type="number" placeholder="Enter school's contact number" name="school-contact" required />
+                </div>
+            </div>
+            <div class="column">
+                
+            </div>
+            <div class="column">
+                <div class="input-box">
+                    <label>State:</label><br>
+                    <input type="text" placeholder="Enter state name" name="school-state" required />  
+                </div>
+                <div class="input-box">
+                    <label>Country:</label><br>
+                    <input type="text" placeholder="Enter country name" name="school-country" required />
+                </div>                    
+            </div>  
+            
+        </div>
+
+        <div class="team-details info-block">
+            <h3>Team Details <section class="asterics"> *</section></h3>
+            <div class="column">
+                <div class="input-box">
+                    <label>Team Name:</label><br>
+                    <input type="text" placeholder="Enter team's name" name="team-name" required />
+                </div>
+                <div class="input-box">
+                    <label>Division: </label><br>
+                    <select name="division" id="division" name="team-division">
+                        <option value="0">-- select --</option>
+                        <option value="senior">Senior</option>
+                        <option value="junior">Junior</option>
+                    </select>
+                </div>
+            </div>
+          
+            <div class="input-box">
+                <label>Problem statement: </label>
+                <select type="text" id="prob-statement" name="prob-statement">
+                    <option value="0">-- select --</option>
+                    <option value="ps1">Problem Staement 1</option>
+                    <option value="ps2">Problem Staement 2</option>
+                </select>
+            </div>
+          
+        </div>
+
+
+        <div class="mentor-details info-block">
+            <h3>Mentor Details <section class="asterics"> *</section></h3>
+            <div class="input-box">
+                <label>Mentor's Full Name:</label>
+                <input type="text" placeholder="Enter team's name" name="mentor-name" required />
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label>Mentor's Contact Number:</label><br>
+                    <input type="number" placeholder="Enter mentor's contact number" name="mentor-contact" required />
+                </div>
+                <div class="input-box">
+                    <label>Mentor's Email Address: </label><br>
+                    <input type="email" placeholder="Enter mentor's email address" name="mentor-email" required />
+                </div>
+            </div>
+                        
+        </div>
+
+        <h5>Minimum of two students are required in a team to participate in the program.</h5>
+
+        <div class="stud-1-details info-block">
+            <h3>Student 1 Details <section class="asterics"> *</section> </h3>
+            <div class="input-box">
+                <label>Student 1's Full Name:</label>
+                <input type="text" placeholder="Enter student 1's full name" name="stud-1-name" required />
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label>Student 1's Contact Number:</label><br>
+                    <input type="number" placeholder="Enter Student 1's contact number" name="stud-1-contact" required />
+                </div>
+    
+                <div class="input-box">
+                    <label>Student 1's Email Address: </label><br>
+                    <input type="email" placeholder="Enter student 1's email address" name="stud-1-email" required />
+                </div> 
+            </div>
+            
+
+            <div class="input-box"></div>
+                <label for="stud-1-grade">Grade:</label>
+                <select name="stud-1-grade" id="stud-1-grade" name="stud-1-grade">
+                    <option value="selecet">-- select --</option>
+                    <option value="8">8th</option>
+                    <option value="9">9th</option>
+                    <option value="10">10th</option>
+                    <option value="11">11th</option>
+                    <option value="12">12th</option>
+                </select>
+            </div>  
+
+        </div>
+
+        <div class="stud-2-details info-block">
+           
+            <h3>Student 2 Details <section class="asterics"> *</section> </h3>
+            <div class="input-box">
+                <label>Student 2's Full Name:</label>
+                <input type="text" placeholder="Enter student 2's full name" name="stud-2-name" required/>
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label>Student 2's Contact Number:</label><br>
+                    <input type="number" placeholder="Enter Student 2's contact number" name="stud-2-contact" required/>
+                </div>
+    
+                <div class="input-box">
+                    <label>Student 2's Email Address: </label><br>
+                    <input type="email" placeholder="Enter student 2's email address" name="stud-2-email" required />
+                </div>
+            </div>
+             
+
+            <div class="column">
+                <div class="input-box">
+                    <label for="stud-2-grade">Grade:</label>
+                    <select name="stud-2-grade" id="stud-2-grade" name="stud-2-grade" required>
+                        <option value="selecet">-- select --</option>
+                        <option value="8">8th</option>
+                        <option value="9">9th</option>
+                        <option value="10">10th</option>
+                        <option value="11">11th</option>
+                        <option value="12">12th</option>
+                    </select>
+                </div>
+               
+            </div>  
+                     
+        </div>
+
+        <div class="stud-3-details info-block">
+            
+            <h3>Student 3 Details <section class="asterics"> *</section> </h3>
+
+            <div class="input-box">
+                <label>Student 3's Full Name:</label>
+                <input type="text" placeholder="Enter student1 full name" name="stud-3-name" id="stud-3-name" />
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label>Student 3's Contact Number:</label>
+                    <input type="number" placeholder="Enter Student 3's contact number" name="stud-3-contact" id="stud-3-contact" />
+                </div>
+    
+                <div class="input-box">
+                    <label>Student 3's Email Address: </label>
+                    <input type="email" placeholder="Enter student 2's email address" name="stud-3-email" id="stud-3-email"/>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="input-box">
+                    <label for="stud-3-grade">Grade:</label>
+                    <select name="stud-3-grade" id="stud-3-grade" name="stud-3-grade" id="stud-3-grade">
+                        <option value="selecet">-- select --</option>
+                        <option value="8">8th</option>
+                        <option value="9">9th</option>
+                        <option value="10">10th</option>
+                        <option value="11">11th</option>
+                        <option value="12">12th</option>
+                    </select>
+                </div>
+                <div class="input-box remove">
+                    <span id="remove-stud-3-btn" class="remove-stud-btn">Remove Student</span>
+                </div>
+            </div> 
+            <h5>Maximum of three students are allowed to participate in a team.</h5>
+                     
+        </div>
+        <br>
+        <span id="add-stud-btn">+ Add Student</span>
+        <button id="save-btn">Save & Proceed to payment</button>
+      </form>
+    </section>
+
+
+    <script src="js/auth.js"></script>
+    <script src="src/team.js"></script>
+  </body>
+</html>
