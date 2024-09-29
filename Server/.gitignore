@@ -1,88 +1,25 @@
 # Node.js dependencies
 node_modules/
 
-# Environment variables file
+# Build output
+dist/
+build/
+
+# Environment variables
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
 # Logs
-logs/
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Debugging/Crash reports
-pids/
-*.pid
-*.seed
-*.pid.lock
+# OS files
+.DS_Store
+Thumbs.db
 
-# Directory for modules created by npm
-node_modules/
-jspm_packages/
-dist/
-build/
-
-# Coverage directory used by testing tools
-coverage/
-
-# IDE-related files
+# IDE/editor specific files
 .vscode/
 .idea/
-.DS_Store
 
-# Dependency directories
-node_modules/
-bower_components/
-
-# Optional npm cache directory
-.npm/
-
-# Optional REPL history
-.node_repl_history
-
-# ESLint cache
-.eslintcache
-
-# Optional dotenv environment variables file
-.env
-.env.test
-
-# System files
-Thumbs.db
-.DS_Store
-
-# Temporary files
-*.tmp
-*.swp
-*.bak
-
-# Ignoring production build files
-/public/build/
-
-# Ignore TypeScript cache
-*.tsbuildinfo
-
-# Ignore test coverage files
-coverage/
-
-# Ignore log files
-logs/
+# Miscellaneous
 *.log
-
-# Ignore temporary and backup files
-*.tmp
-*.swp
-*.bak
-
-# Ignore MacOS system files
-.DS_Store
-
-# Ignore lockfiles
-package-lock.json
-yarn.lock
-
