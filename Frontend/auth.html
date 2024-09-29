@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/auth.css"/>
-    <link rel="icon" href="public/assets/images/yip-logo.png">
+    <link rel="icon" href="images/yip-logo.png">
+    <title>YIP'24 Registration</title>
   </head>     
   <body>
     <nav>
         <div class="nav-container">
             <div class="nav-icon-box">
-                <a href="https://www.iitkgp.ac.in/" target="_blank"><img src="public/assets/images/iit-kgp-logo.png" alt=""></a>
-                <a href="http://barc.iitkgp.ac.in/" target="_blank"><img src="public/assets/images/sbrc-logo.jpg" alt=""></a>
-                <a href="https://yip2025.netlify.app/" target="_blank"><img src="public/assets/images/yip-logo.png" alt=""></a>
+                <a href="https://www.iitkgp.ac.in/" target="_blank"><img src="images/iit-kgp-logo.png" alt=""></a>
+                <a href="http://barc.iitkgp.ac.in/" target="_blank"><img src="images/sbrc-logo.jpg" alt=""></a>
+                <a href="https://yip2025.netlify.app/" target="_blank"><img src="images/yip-logo.png" alt=""></a>
             </div>
             <div class="yip">YIP 2024</div>
             <div class="nav-link">
@@ -85,14 +86,22 @@
                     </select>
                 </div>
             </div>
-          
+            
+            <div class="input-box">
+                <label>Theme:</label><br>
+                <select name="prob-theme" id="prob-theme">
+                    <option value="0">-- select --</option>
+                    <option value="theme-1">Theme 1</option>
+                    <option value="theme-2">Theme 2</option>
+                    <option value="theme-3">Theme 3</option>
+                    <option value="theme-4">Theme 4</option>
+                    <option value="theme-5">Theme 5</option>
+                    <option value="theme-6">Theme 6</option>
+                </select>
+            </div>
             <div class="input-box">
                 <label>Problem statement: </label>
-                <select type="text" id="prob-statement" name="prob-statement">
-                    <option value="0">-- select --</option>
-                    <option value="ps1">Problem Staement 1</option>
-                    <option value="ps2">Problem Staement 2</option>
-                </select>
+                <input type="text" id="prob-statement" name="prob-statement">
             </div>
           
         </div>
@@ -118,7 +127,7 @@
                         
         </div>
 
-        <h5>Minimum of two students are required in a team to participate in the program.</h5>
+        <h5>Note: Minimum of 2 and maximum of 3 students are allowed in a team to participate in YIP 2024</h5>
 
         <div class="stud-1-details info-block">
             <h3>Student 1 Details <section class="asterics"> *</section> </h3>
@@ -143,7 +152,7 @@
             <div class="input-box"></div>
                 <label for="stud-1-grade">Grade:</label>
                 <select name="stud-1-grade" id="stud-1-grade" name="stud-1-grade">
-                    <option value="selecet">-- select --</option>
+                    <option value="0">-- select --</option>
                     <option value="8">8th</option>
                     <option value="9">9th</option>
                     <option value="10">10th</option>
@@ -179,7 +188,7 @@
                 <div class="input-box">
                     <label for="stud-2-grade">Grade:</label>
                     <select name="stud-2-grade" id="stud-2-grade" name="stud-2-grade" required>
-                        <option value="selecet">-- select --</option>
+                        <option value="0">-- select --</option>
                         <option value="8">8th</option>
                         <option value="9">9th</option>
                         <option value="10">10th</option>
@@ -217,7 +226,7 @@
                 <div class="input-box">
                     <label for="stud-3-grade">Grade:</label>
                     <select name="stud-3-grade" id="stud-3-grade" name="stud-3-grade" id="stud-3-grade">
-                        <option value="selecet">-- select --</option>
+                        <option value="0">-- select --</option>
                         <option value="8">8th</option>
                         <option value="9">9th</option>
                         <option value="10">10th</option>
@@ -229,7 +238,6 @@
                     <span id="remove-stud-3-btn" class="remove-stud-btn">Remove Student</span>
                 </div>
             </div> 
-            <h5>Maximum of three students are allowed to participate in a team.</h5>
                      
         </div>
         <br>

@@ -297,3 +297,10 @@ h5{
   }
 
 }
+
+@media screen and (max-width: 400px){
+  .yip{
+    display: none;
+  }
+  
+}
