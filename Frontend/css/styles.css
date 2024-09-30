@@ -235,11 +235,12 @@ nav {
   list-style-type: none;
 }
 .about {
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
 }
 
 .about__container {
   padding-block: 0;
+ 
 }
 
 .about__grid {
@@ -976,6 +977,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  border-radius: 20px;
 }
 
 .testimonials-wrapper {
