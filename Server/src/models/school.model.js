@@ -9,13 +9,12 @@ const schoolSchema = new mongoose.Schema({
     emailId:{
         type: String,
         required: true,
-        unique: true,
         lowercase: true
     },
     contactNumber:{
         type: String,
         required: true,
-        unique: true
+        
     },
     state:{
         type: String,
