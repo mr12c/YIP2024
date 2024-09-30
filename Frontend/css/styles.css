@@ -154,13 +154,19 @@ nav {
   align-items: center;
   justify-content: space-between;
   color: var(--secondary-color);
+  font-size: 1.12rem;
+  font-weight: 500;
+}
+
+#dropdown li a {
+  font-weight: 500; 
+  /* color: var(--secondary-color);  */
 }
 
 .nav__logo img {
-  height: 140px;
-  width: 120px;
+  height: 65px;
+  width: 58px;
   margin-left: 13px;
-  /* margin-right: 130px; */
 }
 
 .nav__logo1 img {
@@ -178,7 +184,7 @@ nav {
 
 .link a {
   padding: 5px;
-  font-size: 1rem;
+  font-size: 1.12rem;
   font-weight: 500;
   color: var(--secondary-color);
   transition: 0.3s;
@@ -186,7 +192,7 @@ nav {
 
 .link1 a {
   padding: 8px;
-  font-size: 1rem;
+  font-size: 1.12rem;
   font-weight: 500;
   color: var(--secondary-color);
   transition: 0.3s;
@@ -752,6 +758,10 @@ nav {
     opacity: 1;
   }
 
+  .nav__links.open .link1 a {
+    opacity: 1;
+  }
+
   .nav__links.open {
     transform: scaleY(1);
   }
@@ -997,7 +1007,6 @@ nav {
   isolation: isolate;
   margin-bottom: 1rem;
   padding-left: 20px;
-  padding: 20px;
   font-size: 1.2rem;
   font-weight: 500;
   color: #263339;
@@ -1033,7 +1042,7 @@ nav {
   flex-direction: column; 
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 0.1rem;
 }
 
 .slide-content {
@@ -1046,9 +1055,9 @@ nav {
 
 .slide-img {
   width: 100%;
-  max-width: 600px; 
+  max-width: 450px; 
   height: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .slide-img img {
@@ -1086,7 +1095,7 @@ nav {
 .controls {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 .controls i {
