@@ -11,7 +11,7 @@ const teamSchema = new mongoose.Schema({
         ref:'School',
         required:true
     },
-    divison:{
+    division:{
         type:String,
         required:true
     },

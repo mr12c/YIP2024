@@ -14,7 +14,7 @@ import Team from "../models/team.model.js";
 
 
 
-const createTeam = asyncHandler(async()=>{
+const createTeam = asyncHandler(async(req,res)=>{
     const {team,school,mentor,s1,s2,s3} = req.body;
     if(s3){
         if(!team,!school|| !mentor || !s1 || !s2){

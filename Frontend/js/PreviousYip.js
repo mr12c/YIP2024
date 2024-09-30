@@ -177,3 +177,10 @@ const animateImages = () => {
         img2.style.opacity = "1";
     }, 600);
 };
+
+
+
+
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.menu').classList.toggle('active');
+});

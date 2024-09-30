@@ -251,10 +251,10 @@ html {
 	background-size: auto;
 }
 .next::after {
-	background-image: url(/Frontend/images/MessageImages/icon-next.svg);
+	background-image: url(/images/MessageImages/icon-next.svg);
 }
 .prev::after {
-	background-image: url(/Frontend/images/MessageImages/icon-prev.svg);
+	background-image: url(/images/MessageImages/icon-prev.svg);
 }
 @media only screen and (min-width: 768px) {
 	.slide {
