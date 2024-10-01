@@ -19,6 +19,10 @@ const teamSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    theme:{
+        type:String,
+        required:true
+    },
     mentor:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'Mentor',
