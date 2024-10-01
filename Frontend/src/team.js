@@ -9,8 +9,9 @@ document.getElementById('save-btn').addEventListener('click', async (e) => {
   // Collect the data
   const team = {
     name: document.querySelector('input[name="team-name"]').value,
-    division: document.querySelector('select[name="division"]').value,
-    problemStatement: document.querySelector('select[name="prob-statement"]').value,
+    division: document.querySelector('select[name="team-division"]').value,
+    theme: document.querySelector('select[name="prob-theme"]').value,
+    problemStatement: document.querySelector('input[name="prob-statement"]').value,
   };
 
   const school = {
