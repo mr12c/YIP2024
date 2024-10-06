@@ -56,7 +56,7 @@ ScrollReveal().reveal(".blog__card", {
   interval: 500,
 });
 
-const swiper = new swiper(".swiper", {
+const swiper = new Swiper(".swiper", {
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -93,6 +93,18 @@ for (let copyIcon of copyIcons) {
   });
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 const initSlider = () => {
   const imageList = document.querySelector(".unique-slider-wrapper .unique-image-list");
   const slideButtons = document.querySelectorAll(".unique-slider-wrapper .unique-slide-button");
@@ -126,6 +138,7 @@ const initSlider = () => {
       document.addEventListener("mousemove", handleMouseMove);
       document.addEventListener("mouseup", handleMouseUp);
   });
+  console.log(slideButtons)
   // Slide images according to the slide button clicks
   slideButtons.forEach(button => {
       button.addEventListener("click", () => {
