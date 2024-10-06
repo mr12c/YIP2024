@@ -56,7 +56,7 @@ ScrollReveal().reveal(".blog__card", {
   interval: 500,
 });
 
-const swiper = new Swiper(".swiper", {
+const swiper = new swiper(".swiper", {
   loop: true,
   pagination: {
     el: ".swiper-pagination",
