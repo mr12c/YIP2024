@@ -169,7 +169,7 @@ document.getElementById('save-btn').addEventListener('click', async (e) => {
 
   // Send data to API
   try {
-    const response = await fetch('https://yip2024.onrender.com/api/v1/team/register', {
+    const response = await fetch('https://yipbackend-2.onrender.com/api/v1/team/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
