@@ -97,38 +97,72 @@ for (let copyIcon of copyIcons) {
 
 
 
-const slider = document.querySelector(".slider");
-const slides = document.querySelectorAll(".slide");
-const leftArrow = document.querySelector(".controls i:nth-child(1)");
-const rightArrow = document.querySelector(".controls i:nth-child(3)"); // Adjusted to select the correct right arrow
-const dotsWrapper = document.querySelector(".dots");
-const dots = document.querySelectorAll(".dots span");
 
-let slideIndex = 0;
 
-const setIndex = () => {
-  document.querySelector(".dots .active").classList.remove("active");
-  slider.style.transform = `translateX(${slideIndex * -100}%)`;
-  dotsWrapper.children[slideIndex].classList.add("active");
-};
 
-dots.forEach((dot, ind) => {
-  dot.addEventListener("click", () => {
-    slideIndex = ind;
-    setIndex();
+
+
+
+
+
+const initSlider = () => {
+  const imageList = document.querySelector(".unique-slider-wrapper .unique-image-list");
+  const slideButtons = document.querySelectorAll(".unique-slider-wrapper .unique-slide-button");
+  const sliderScrollbar = document.querySelector(".unique-container .unique-slider-scrollbar");
+  const scrollbarThumb = sliderScrollbar.querySelector(".unique-scrollbar-thumb");
+  const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+  
+  // Handle scrollbar thumb drag
+  scrollbarThumb.addEventListener("mousedown", (e) => {
+      const startX = e.clientX;
+      const thumbPosition = scrollbarThumb.offsetLeft;
+      const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+      
+      // Update thumb position on mouse move
+      const handleMouseMove = (e) => {
+          const deltaX = e.clientX - startX;
+          const newThumbPosition = thumbPosition + deltaX;
+          // Ensure the scrollbar thumb stays within bounds
+          const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+          const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+          
+          scrollbarThumb.style.left = `${boundedPosition}px`;
+          imageList.scrollLeft = scrollPosition;
+      }
+      // Remove event listeners on mouse up
+      const handleMouseUp = () => {
+          document.removeEventListener("mousemove", handleMouseMove);
+          document.removeEventListener("mouseup", handleMouseUp);
+      }
+      // Add event listeners for drag interaction
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
   });
-});
-
-leftArrow.addEventListener("click", () => {
-  slideIndex = slideIndex > 0 ? slideIndex - 1 : slides.length - 1;
-  setIndex();
-});
-
-rightArrow.addEventListener("click", () => {
-  slideIndex = slideIndex < slides.length - 1 ? slideIndex + 1 : 0;
-  setIndex();
-});
-
-setInterval(() => {
-  rightArrow.click();
-}, 7000);
+  console.log(slideButtons)
+  // Slide images according to the slide button clicks
+  slideButtons.forEach(button => {
+      button.addEventListener("click", () => {
+          const direction = button.id === "unique-prev-slide" ? -1 : 1;
+          const scrollAmount = imageList.clientWidth * direction;
+          imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+  });
+   // Show or hide slide buttons based on scroll position
+  const handleSlideButtons = () => {
+      slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+      slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+  }
+  // Update scrollbar thumb position based on image scroll
+  const updateScrollThumbPosition = () => {
+      const scrollPosition = imageList.scrollLeft;
+      const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+      scrollbarThumb.style.left = `${thumbPosition}px`;
+  }
+  // Call these two functions when image list scrolls
+  imageList.addEventListener("scroll", () => {
+      updateScrollThumbPosition();
+      handleSlideButtons();
+  });
+}
+window.addEventListener("resize", initSlider);
+window.addEventListener("load", initSlider);

@@ -17,7 +17,7 @@ document.getElementById("queryForm").addEventListener("submit", function (e) {
     spinner.style.display = "block"; // Show the spinner
 
     // Send the request using fetch
-    fetch('http://localhost:3000/api/v1/mail/sendemail', {
+    fetch('https://yipbackend-2.onrender.com/api/v1/mail/sendemail', {
         method: 'POST', // Using POST method
         headers: {
             'Content-Type': 'application/json', // Set the content type to JSON

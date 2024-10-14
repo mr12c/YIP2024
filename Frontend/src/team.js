@@ -169,15 +169,15 @@ document.getElementById('save-btn').addEventListener('click', async (e) => {
             finalTeam = {team,school,mentor,s1,s2,s3}
     }
 
-    // Send data to API
-    try {
-      const response = await fetch('http://localhost:3000/api/v1/team/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(finalTeam),
-      });
+  // Send data to API
+  try {
+    const response = await fetch('https://yipbackend-2.onrender.com/api/v1/team/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(finalTeam),
+    });
 
       const result = await response.text();
       console.log(result);

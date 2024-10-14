@@ -1,7 +1,7 @@
 const slider = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slide");
 const leftArrow = document.querySelector(".controls i:nth-child(1)");
-const rightArrow = document.querySelector(".controls i:nth-child(2)");
+const rightArrow = document.querySelector(".controls i:nth-child(3)");
 const dotsWrapper = document.querySelector(".dots");
 const dots = document.querySelectorAll(".dots span");
 
