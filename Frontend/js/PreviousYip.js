@@ -1,5 +1,5 @@
 const previousYearBtns = document.querySelectorAll('.pre-btn-ele');
-let currentYear = 2022; // Set the current year
+let currentYear = 2023; // Set the current year
 const preYipFullPreviewCont = document.getElementById("pre-yip-full-prev")
 const img1 = document.querySelector('.tent-1')
 const img2 = document.querySelector('.tent-2')
@@ -7,6 +7,15 @@ const sectionPara = document.querySelector('.section__subtitle')
 const mainh1 = document.querySelector('.pre-main-h')
  
 const PreYipData = [
+    {
+        year:2023,
+        img1:"https://yip.iitkgp.ac.in/static/yip_22.jpeg",
+        img2:"./images/PYimg/img23.jpg",
+        mainh1:"YIP 2023",
+        link:"/coffeeTableBooks/yip23.pdf",
+        text:'The Young Innovators Program 2023 at IIT Kharagpur saw an impressive participation of 3000 students from over 1500 schools across the globe, including countries such as India, Denmark, Abu Dhabi, Malaysia, Singapore, and Saudi Arabia. The top 32 schools that progressed to the second round were given the opportunity to visit IIT Kharagpur for a three-day immersive experience. During this time, students were introduced to the rich scientific environment of the institution and had the chance to present their innovative projects to a panel of esteemed researchers and distinguished guests.In the Senior Division, the winning team was Three Mind Mavericks from L AGURCHAND MANMULL JAIN SCHOOL. The first runner-up was Team Sense-able from KiiT International School, followed by Team Green Innovators from VIVEKANANDA MISSION SCHOOL, JOKA, who secured the second runner-up position. In the Junior Division, Team The Three Blues Lakshmipat from Singhania Academy NATIONAL SCHOOL claimed the top spot. The first runner-up was Team Wastewarriors from Heritage Xperential Learning School, while Team Green Nexus from Spring Meadows Public School finished as the second runner-up.'
+    },
+    
     {
         year:2022,
         img1:"https://yip.iitkgp.ac.in/static/yip_22.jpeg",
