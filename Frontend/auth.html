@@ -40,18 +40,21 @@
         <div class="school-details info-block">
             <h3>School Details <section class="asterics"> *</section></h3>
             <div class="input-box">
-                <label>School Name:</label>
+                <label>School Name:</label><span></span> <!-- don't remove these spans , needs two html elements b/w label and input/slect for js logic-->
                 <input type="text" placeholder="Enter school's name" name="school-name" required />
+                <p class="input-error">Please fill out this field.</p>
             </div>
 
             <div class="column">
                 <div class="input-box">
                     <label>School Email Address: </label><br>
                     <input type="email" placeholder="Enter school's email address" name="school-email" required />
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
                 <div class="input-box">
                     <label>School Contact Number:</label><br>
                     <input type="number" placeholder="Enter school's contact number" name="school-contact" required />
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
             </div>
             <div class="column">
@@ -60,11 +63,13 @@
             <div class="column">
                 <div class="input-box">
                     <label>State:</label><br>
-                    <input type="text" placeholder="Enter state name" name="school-state" required />  
+                    <input type="text" placeholder="Enter state name" name="school-state" required /> 
+                    <p class="input-error">Please fill out this field.</p> 
                 </div>
                 <div class="input-box">
                     <label>Country:</label><br>
                     <input type="text" placeholder="Enter country name" name="school-country" required />
+                    <p class="input-error">Please fill out this field.</p>
                 </div>                    
             </div>  
             
@@ -76,6 +81,7 @@
                 <div class="input-box">
                     <label>Team Name:</label><br>
                     <input type="text" placeholder="Enter team's name" name="team-name" required />
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
                 <div class="input-box">
                     <label>Division: </label><br>
@@ -84,6 +90,7 @@
                         <option value="senior">Senior</option>
                         <option value="junior">Junior</option>
                     </select>
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
             </div>
             
@@ -98,10 +105,12 @@
                     <option value="theme-5">Theme 5</option>
                     <option value="theme-6">Theme 6</option>
                 </select>
+                <p class="input-error">Please fill out this field.</p>
             </div>
             <div class="input-box">
-                <label>Problem statement: </label>
+                <label>Problem statement: </label><span></span> <!-- don't remove these spans , needs two html elements b/w label and input/slect for js logic-->
                 <input type="text" id="prob-statement" name="prob-statement" required>
+                <p class="input-error">Please fill out this field.</p>
             </div>
           
         </div>
@@ -110,18 +119,21 @@
         <div class="mentor-details info-block">
             <h3>Mentor Details <section class="asterics"> *</section></h3>
             <div class="input-box">
-                <label>Mentor's Full Name:</label>
+                <label>Mentor's Full Name:</label><span></span> <!-- don't remove these spans , needs two html elements b/w label and input/slect for js logic-->
                 <input type="text" placeholder="Enter team's name" name="mentor-name" required />
+                <p class="input-error">Please fill out this field.</p>
             </div>
 
             <div class="column">
                 <div class="input-box">
                     <label>Mentor's Contact Number:</label><br>
                     <input type="number" placeholder="Enter mentor's contact number" name="mentor-contact" required />
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
                 <div class="input-box">
                     <label>Mentor's Email Address: </label><br>
                     <input type="email" placeholder="Enter mentor's email address" name="mentor-email" required />
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
             </div>
                         
@@ -132,25 +144,28 @@
         <div class="stud-1-details info-block">
             <h3>Student 1 Details <section class="asterics"> *</section> </h3>
             <div class="input-box">
-                <label>Student 1's Full Name:</label>
+                <label>Student 1's Full Name:</label><span></span> <!-- don't remove these spans , needs two html elements b/w label and input/slect for js logic-->
                 <input type="text" placeholder="Enter student 1's full name" name="stud-1-name" required />
+                <p class="input-error">Please fill out this field.</p>
             </div>
 
             <div class="column">
                 <div class="input-box">
                     <label>Student 1's Contact Number:</label><br>
                     <input type="number" placeholder="Enter Student 1's contact number" name="stud-1-contact" required />
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
     
                 <div class="input-box">
                     <label>Student 1's Email Address: </label><br>
                     <input type="email" placeholder="Enter student 1's email address" name="stud-1-email" required />
+                    <p class="input-error">Please fill out this field.</p>
                 </div> 
             </div>
             
 
             <div class="input-box"></div>
-                <label for="stud-1-grade">Grade:</label>
+                <label for="stud-1-grade">Sudent 1's Grade:</label> <span></span> <!-- don't remove these spans , needs two html elements b/w label and input/slect for js logic-->
                 <select name="stud-1-grade" id="stud-1-grade" name="stud-1-grade">
                     <option value="0">-- select --</option>
                     <option value="8">8th</option>
@@ -159,6 +174,7 @@
                     <option value="11">11th</option>
                     <option value="12">12th</option>
                 </select>
+                <p class="input-error">Please fill out this field.</p>
             </div>  
 
         </div>
@@ -167,26 +183,29 @@
            
             <h3>Student 2 Details <section class="asterics"> *</section> </h3>
             <div class="input-box">
-                <label>Student 2's Full Name:</label>
+                <label>Student 2's Full Name:</label><span></span> <!-- don't remove these spans , needs two html elements b/w label and input/slect for js logic-->
                 <input type="text" placeholder="Enter student 2's full name" name="stud-2-name" required/>
+                <p class="input-error">Please fill out this field.</p>
             </div>
 
             <div class="column">
                 <div class="input-box">
                     <label>Student 2's Contact Number:</label><br>
                     <input type="number" placeholder="Enter Student 2's contact number" name="stud-2-contact" required/>
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
     
                 <div class="input-box">
                     <label>Student 2's Email Address: </label><br>
                     <input type="email" placeholder="Enter student 2's email address" name="stud-2-email" required />
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
             </div>
              
 
             <div class="column">
                 <div class="input-box">
-                    <label for="stud-2-grade">Grade:</label>
+                    <label for="stud-2-grade">Student 2's Grade:</label> <span></span> <!-- don't remove these spans , needed for js logic-->
                     <select name="stud-2-grade" id="stud-2-grade" name="stud-2-grade" required>
                         <option value="0">-- select --</option>
                         <option value="8">8th</option>
@@ -195,6 +214,7 @@
                         <option value="11">11th</option>
                         <option value="12">12th</option>
                     </select>
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
                
             </div>  
@@ -206,25 +226,28 @@
             <h3>Student 3 Details <section class="asterics"> *</section> </h3>
 
             <div class="input-box">
-                <label>Student 3's Full Name:</label>
+                <label>Student 3's Full Name:</label><span></span> <!-- don't remove these spans , needs two html elements b/w label and input/slect for js logic-->
                 <input type="text" placeholder="Enter student1 full name" name="stud-3-name" id="stud-3-name" />
+                <p class="input-error">Please fill out this field.</p>
             </div>
 
             <div class="column">
                 <div class="input-box">
-                    <label>Student 3's Contact Number:</label>
+                    <label>Student 3's Contact Number:</label><span></span> <!-- don't remove these spans , needs two html elements b/w label and input/slect for js logic-->
                     <input type="number" placeholder="Enter Student 3's contact number" name="stud-3-contact" id="stud-3-contact" />
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
     
                 <div class="input-box">
-                    <label>Student 3's Email Address: </label>
+                    <label>Student 3's Email Address: </label><span></span> <!-- don't remove these spans , needs two html elements b/w label and input/slect for js logic-->
                     <input type="email" placeholder="Enter student 2's email address" name="stud-3-email" id="stud-3-email"/>
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
             </div>
 
             <div class="column">
                 <div class="input-box">
-                    <label for="stud-3-grade">Grade:</label>
+                    <label for="stud-3-grade">Student 3's Grade:</label> <span></span> <!-- don't remove these spans , needs two html elements b/w label and input/slect for js logic-->
                     <select name="stud-3-grade" id="stud-3-grade" name="stud-3-grade" id="stud-3-grade">
                         <option value="0">-- select --</option>
                         <option value="8">8th</option>
@@ -233,6 +256,7 @@
                         <option value="11">11th</option>
                         <option value="12">12th</option>
                     </select>
+                    <p class="input-error">Please fill out this field.</p>
                 </div>
                 <div class="input-box remove">
                     <span id="remove-stud-3-btn" class="remove-stud-btn">Remove Student 3</span>
@@ -241,7 +265,7 @@
                      
         </div>
         <br>
-        <span id="add-stud-btn">+ Add Student</span>
+        <span id="add-stud-btn" type="button">+ Add Student</span>
         <span id="info-section-error" style="text-align:center; width:fit-content;display:block; margin:auto;color:rgb(242, 59, 93)"></span>
         <button id="save-btn">Save & Proceed to payment</button>
       </form>
