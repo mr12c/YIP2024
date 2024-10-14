@@ -11,8 +11,12 @@ menuBtn.addEventListener("click", (e) => {
 });
 
 navLinks.addEventListener("click", (e) => {
-  navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-line");
+  const target = e.target;
+
+  if (!target.classList.contains("more-info-button")) {
+    navLinks.classList.remove("open");
+    menuBtnIcon.setAttribute("class", "ri-menu-line");
+  }
 });
 
 const scrollRevealOption = {
