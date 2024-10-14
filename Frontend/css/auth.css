@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   background: radial-gradient(circle, var(--secondary-color), var(--primary-color));
 }
 
@@ -210,11 +210,11 @@ form .stud-3-details{
 }
 
 nav{
-  width: 100%;
+  width: 100vw;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-radius: 15px;
+  /* border-radius: 15px; */
 }
 
 .nav-container{
@@ -222,9 +222,10 @@ nav{
   justify-content: space-between;
   width: 100%;
   background-color: var(--primary-color);
-  padding: 5px;
+  padding: 5px 30px ;
   align-items: center;
-  border-radius: 15px
+
+  /* border-radius: 15px */
 }
 
 /* nav a {
@@ -242,6 +243,7 @@ nav{
 .nav-link a{ 
   text-decoration: none;
   color: black;
+  padding: 0 10px;
 }
 
 .nav-link a:hover{
@@ -278,7 +280,12 @@ h5{
   color: red;
   display: inline;
 }
-
+.input-error {
+  color: red;
+  font-size: small;
+  margin-left: 15px;
+  display: none;
+}
 
 /*Responsive*/
 @media screen and (max-width: 600px) {
@@ -302,6 +309,27 @@ h5{
     justify-content: space-around;
   }
 
+  .nav-link a{
+    padding: 7.5px;
+  }
+
+  .nav-container{
+    padding: 5px;
+  }
+  
+  h1{
+    font-size: 1.5rem;
+  }
+
+  body{
+    padding: 0 0 20px;
+  }
+  .nav-icon-box img {
+    height: 30px;
+    width: auto;
+    padding-right: 0 10px 0 5px;
+    
+  }
 }
 
 @media screen and (max-width: 400px){
@@ -323,20 +351,16 @@ h5{
     padding: 0;
   }
 
-  nav{
-    width: 100vw;
-    border-radius: 0;
-  }
-  .nav-container{
-    border-radius: 0;
+  
+  h1{
+    font-size: 1.2rem;
   }
 
-  .nav-link a{
-    padding: 10px;
-  }
-
-  .nav-icon-box img {
+  #save-btn {
+    width: 70%;
+    margin: 30px 15% 10px;
     
   }
+
   
 }
