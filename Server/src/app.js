@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser'
 import path from 'path'
 import { fileURLToPath } from 'url';
  import { ApiError } from './utils/ApiError.js';
+ import { errorHandler } from './middlewares/error.js';
 const app = express()
 
 
@@ -48,6 +49,7 @@ app.use('/api/v1/users',userRouter)
 app.use('/api/v1/chats',chatRouter)
 app.use('/api/v1/mail',emailRouter)
 app.use('/api/v1/team',teamRouter)
+app.use(errorHandler);
 
 
 export {app}

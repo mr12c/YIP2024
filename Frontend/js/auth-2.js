@@ -17,78 +17,113 @@ switchLoginBtn.addEventListener("click", () => {
 });
 
 
-loginBtn.addEventListener('click', async (ev)=> {
-    ev.preventDefault();
-    console.log("Login button clicked");
+document.getElementById('login-btn').addEventListener('click', async (event) => {
+  event.preventDefault(); // Prevent form submission
 
-    const team = {
-        teamName : document.querySelector("#login-team-name").value,
-        password : document.querySelector("#login-password").value
+  // Get values from the input fields
+  const teamName = document.getElementById('login-team-name').value;
+  const password = document.getElementById('login-password').value;
+  const loadingSpinner = document.getElementById('login-loading-spinner'); // Spinner element
 
-    }
-    // console.log(team.teamName + "\n" + team.password);
-    try {
-        const response = await fetch('http://localhost:8080/login', {
+  // Validate the form (simple example)
+  if (!teamName || !password) {
+      alert('Please fill in all fields.');
+      return;
+  }
+
+  const loginData = {
+      team_name: teamName,
+      password: password
+  };
+  console.log(loginData);
+
+  try {
+      // Show the loading spinner before making the request
+      loadingSpinner.style.display = 'block';
+
+      // Send the request
+      const response = await fetch('https://yipbackend-2.onrender.com/api/v1/team/login', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
+              'Content-Type': 'application/json'
           },
-          body: JSON.stringify(team),
-        });
-  
-        const result = await response.text();
-        console.log("response = " + result);
-        if (response.ok){
-          alert('Login successful');
-          error.textContent=""
-        } else {
-          console.log(result)
-          error.textContent = extractErrorMessage(result);
-        }
-      } catch (error) {
-        alert('line 49 : Failed to register. Please try again.');
-        console.log(error);
-      }
-})
+          body: JSON.stringify(loginData)  // Send the data as JSON
+      });
+
+      // Hide the loading spinner after receiving the response
+      loadingSpinner.style.display = 'none';
+
+      // Handle the response
+      if (response.ok) {
+          const data = await response.json();
+          console.log(data.data.team);
+          alert('Login successful!');
+          localStorage.setItem('teamData', JSON.stringify(data?.data?.team)); 
+          console.log('local storage', localStorage.getItem('teamData'))
+      }  
+  } catch (error) {
+      console.error( error.response.data.message);
+      loadingSpinner.style.display = 'none'; // Hide spinner in case of error
+      alert(error.response.data.message);
+  }
+});
 
 
-signupBtn.addEventListener('click', async (ev)=> {
-    ev.preventDefault();
-    const teamName = document.querySelector("#signup-team-name").value;
-    const password = document.querySelector("#signup-password").value;
-    const confirmPassword = document.querySelector("#confirm-password").value;
-    console.log("Signup button clicked");
-    if(confirmPassword === password){
-        const team = {
-            teamName : document.querySelector("#signup-team-name").value,
-            password : document.querySelector("#signup-password").value,
-        }
-        console.log(team.teamName + "\n" + team.password);
-        try {
-            const response = await fetch('http://localhost:8080/signup', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(team),
-            });
-    
-            const result = await response.text();
-            if (response.ok){
-            alert('Signup successful');
-            // error.textContent=""
-            } else {
-            alert(result)
-            error.textContent = extractErrorMessage(result);
-            }
-        } catch (error) {
-            alert('Failed to signup. Please try again.');
-            console.log(error);
-        }
-    }else{
-        alert('Password and confirm password do not match');
-    }
+ 
 
+ 
+document.getElementById('signup-btn').addEventListener('click', async (event) => {
+  event.preventDefault(); // Prevent form submission
 
-})
+  // Get values from the input fields
+  const teamName = document.getElementById('signup-team-name').value;
+  const password = document.getElementById('signup-password').value;
+  const confirmPassword = document.getElementById('confirm-password').value;
+  const loadingSpinner = document.getElementById('loading-spinner'); // Spinner element
 
+  // Validate the form (simple example)
+  if (!teamName || !password || !confirmPassword) {
+      alert('Please fill in all fields.');
+      return;
+  }
+
+  if (password !== confirmPassword) {
+      alert('Passwords do not match.');
+      return;
+  }
+
+  const signupData = {
+      team_name: teamName,
+      password: password
+  };
+  console.log(signupData);
+
+  try {
+      // Show the loading spinner before making the request
+      loadingSpinner.style.display = 'block';
+
+      // Send the request
+      const response = await fetch('https://yipbackend-2.onrender.com/api/v1/team/register',{
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(signupData)  // Send the data as JSON
+      });
+
+      // Hide the loading spinner after receiving the response
+      loadingSpinner.style.display = 'none';
+
+      // Handle the response
+      if (response.ok){
+          const data = await response.json();
+          console.log(data);
+          alert('Signup successful!');
+          // Redirect or take action based on successful signup
+      }  
+  } catch (error) {
+      console.error('Error during signup:', error);
+      loadingSpinner.style.display = 'none'; // Hide spinner in case of error
+      alert('An error occurred. Please try again later.');
+  }
+});

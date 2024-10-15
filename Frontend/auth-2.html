@@ -26,7 +26,7 @@
     </nav>
     
     <div class="container">
-        <div class="login-box auth-box " >
+        <div class="login-box auth-box">
             <h1>Log in</h1>
             <form action="">
                 <input type="text" id="login-team-name" placeholder="Team name"><br>
@@ -35,13 +35,15 @@
             </form>
             <hr>
             <div class="switch">
-                <h3 id="nav-p" >New here !  </h3>
+                <h3 id="nav-p">New here!</h3>
                 <button id="switch-signup-btn" class="switch-btn">Sign-up</button>
-                
             </div>
-            
+            <!-- Loading spinner -->
+            <div id="login-loading-spinner" style="display: none;">
+                <p>Loading...</p>
+            </div>
         </div>
-        <div class="signup-box auth-box  move-left">
+        <div class="signup-box auth-box move-left">
             <h1>Sign up</h1>
             <form action="">
                 <input type="text" id="signup-team-name" placeholder="Team name"><br>
@@ -51,13 +53,15 @@
             </form>
             <hr>
             <div class="switch">
-                <h3 id="nav-p" >Already registered!  </h3>
+                <h3 id="nav-p">Already registered! </h3>
                 <button id="switch-login-btn" class="switch-btn">Login</button>
-                
             </div>
-            
-           
+            <!-- Loading spinner -->
+            <div id="loading-spinner" style="display: none;">
+                <p>Loading...</p>
+            </div>
         </div>
+        
         
     </div>
     <script src="js/auth-2.js"></script>

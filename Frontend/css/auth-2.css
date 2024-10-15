@@ -197,3 +197,11 @@ button:hover{
         display: none;
       }
 }
+
+
+
+#loading-spinner,#login-loading-spinner {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
