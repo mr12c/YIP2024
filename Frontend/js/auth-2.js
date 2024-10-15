@@ -61,8 +61,13 @@ document.getElementById('login-btn').addEventListener('click', async (event) => 
           localStorage.setItem('teamData', JSON.stringify(data?.data?.team)); 
           console.log('local storage', localStorage.getItem('teamData'))
       }  
+      else {
+          const data = await response.json();
+          console.error(data.message);
+          alert(data.message);
+      }
   } catch (error) {
-      console.error( error.response.data.message);
+      console.error(error.response.data.message);
       loadingSpinner.style.display = 'none'; // Hide spinner in case of error
       alert(error.response.data.message);
   }
@@ -121,9 +126,15 @@ document.getElementById('signup-btn').addEventListener('click', async (event) =>
           alert('Signup successful!');
           // Redirect or take action based on successful signup
       }  
+      else {
+          const data = await response.json();
+          console.error(data.message);
+          alert(data.message);
+      }
   } catch (error) {
+      alert(error?.response?.data?.message); 
       console.error('Error during signup:', error);
       loadingSpinner.style.display = 'none'; // Hide spinner in case of error
-      alert('An error occurred. Please try again later.');
+      
   }
 });
