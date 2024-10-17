@@ -11,3 +11,14 @@ if (!teamData) {
 
 document.getElementById('team-name').innerHTML = teamData.name;
 document.getElementById('password').innerHTML = teamData.password;
+
+
+document.getElementById('Logout').addEventListener('click', (e) =>
+
+{
+    console.log(e)
+    localStorage.removeItem('teamData');
+    window.location.href = 'login.html';
+  
+}
+)
