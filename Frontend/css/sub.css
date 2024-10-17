@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+
+*{
+    font-family: "Poppins";
+
+}
+
+.card{
+    /* background-color: rgb(126, 255, 227); */
+    background-color: #F8F9FA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+
+}
+
+.card:hover{
+    border:solid 1px rgb(183, 255, 238);
+}
