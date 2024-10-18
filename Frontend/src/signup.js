@@ -57,7 +57,7 @@ document.getElementById('signup-btn').addEventListener('click', async (event) =>
       loadingSpinner.innerHTML="Registering...";
 
       // Send the request
-      const response = await fetch('https://yipbackend-2.onrender.com/api/v1/team/register',{
+      const response = await fetch('http://localhost:4000/api/v1/team/register',{
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
