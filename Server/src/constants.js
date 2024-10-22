@@ -1,1 +1,1 @@
-export const DB_NAME = "OneKgp"
+export const DB_NAME = "yip"

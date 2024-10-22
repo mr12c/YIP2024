@@ -1,5 +1,5 @@
 const previousYearBtns = document.querySelectorAll('.pre-btn-ele');
-let currentYear = 2022; // Set the current year
+let currentYear = 2023; // Set the current year
 const preYipFullPreviewCont = document.getElementById("pre-yip-full-prev")
 const img1 = document.querySelector('.tent-1')
 const img2 = document.querySelector('.tent-2')
@@ -8,35 +8,43 @@ const mainh1 = document.querySelector('.pre-main-h')
  
 const PreYipData = [
     {
+        year:2023,
+        img1:"./images/PYimg/2023s_1.jpg",
+        img2:"./images/PYimg/2023s2.jpg",
+        mainh1:"YIP 2023",
+        link:"https://drive.google.com/file/d/1FkBCeRFWexl59dB8MBtTVv2imF1TIPmT/view?usp=drive_link",
+        text:'The Young Innovators Program 2023 at IIT Kharagpur saw an impressive participation of 3000 students from over 1500 schools across the globe, including countries such as India, Denmark, Abu Dhabi, Malaysia, Singapore, and Saudi Arabia. The top 32 schools that progressed to the second round were given the opportunity to visit IIT Kharagpur for a three-day immersive experience. During this time, students were introduced to the rich scientific environment of the institution and had the chance to present their innovative projects to a panel of esteemed researchers and distinguished guests.'
+    },
+    {
         year:2022,
-        img1:"https://yip.iitkgp.ac.in/static/yip_22.jpeg",
+        img1:"./images/PYimg/2022_2.png",
         img2:"./images/PYimg/img23.jpg",
         mainh1:"YIP 2022",
-        link:"https://yip.iitkgp.ac.in/static/yip22.pdf",
+        link:"https://drive.google.com/file/d/1eSwlm4LGrar2Ku1ZNnCMP6GmEh5uI21n/view?usp=sharing",
         text:'The Young Innovators Program 2022 at IIT Kharagpur witnessed an impressive outreach, encompassing over 1500 schools globally. This remarkable initiative garnered participation from a diverse cohort of 3000 students hailing from countries such as India, Denmark, Abu Dhabi, Malaysia, Singapore, and Saudi Arabia. Notably, the top 31 schools that advanced to the second round were accorded an invaluable opportunity for a three-day visit to IIT Kharagpur. During this immersive experience, students were immersed in the rich scientific milieu of the institution, culminating in the presentation of their innovative models before esteemed researchers and distinguished guests. Ultimately, the Bhartiyam International School emerged as the winner, while the Ridge Valley School secured the position of runners-up, showcasing exceptional talent and ingenuity in this global academic platform'
     },
     {
         year:2019,
-        img1:"https://yip.iitkgp.ac.in/static/gallery/DSC_5146.jpg",
+        img1:"./images/PYimg/2019.png",
         img2:"./images/PYimg/2.png",
         mainh1:"Yip 2019",
-        link:"https://yip.iitkgp.ac.in/static/yip19.pdf",
+        link:"https://drive.google.com/file/d/1ngkV84270SEWgtxeOM3KEZnOOPEEPCpL/view?usp=sharing",
         text:'The third edition of YIP was a huge success, reaching out to 1200+ schools. The event saw the participation of 800+ teams and more than 2400 students with great enthusiasm and zeal. Teams from Singapore, UAE, Indonesia, Malaysia, and Saudi Arabia participated in the event in 2019, and some of them successfully made it to the semi-finals too and visited IIT Kharagpur.'
     },
     {
         year:2018,
-        img1:"https://yip.iitkgp.ac.in/static/gallery/DSC_4668.jpg",
+        img1:"./images/PYimg/2018_1.png",
         img2:"./images/PYimg/1.png",
         mainh1:"YIP 2018",
-        link:"https://yip.iitkgp.ac.in/static/yip18.pdf",
+        link:"https://drive.google.com/file/d/1OJHVV3q6ONrbvgZ1Sup76A6lv94AUPIP/view?usp=sharing",
         text:`The Young Innovators' Program of 2018 at the esteemed IIT KGP showcased an impressive outreach, reaching over 1000 schools across the country. The competition witnessed fierce competition, with two teams hailing from Singapore making it to the semifinals. Among the top 24 schools that had the privilege to visit the esteemed campus of IIT KGP, an experience that undoubtedly left a lasting impression on these young minds. Kaanger Valley Academy from Raipur emerged as the winners, showcasing their creativity and innovation. The Crossword School from Guntur and Tarapore School from Jamshedpur secured the runner-up positions, further highlighting the program's commitment to nurturing young minds and fostering innovation in the field of education.`
     },
     {
         year:2017,
-        img1:"https://yip.iitkgp.ac.in/static/gallery/DSC_4796.jpg",
+        img1:"./images/PYimg/2021_2.png",
         img2:"./images/PYimg/4.png",
         mainh1:"Yip 2017",
-        link:"https://yip.iitkgp.ac.in/static/yip17.pdf",
+        link:"https://drive.google.com/file/d/1GQ55dSsNqpLYCrfwAqjrJJdXkURSNDPn/view?usp=sharing",
         text:`The Young Innovators' Program of 2017 IIT KGP boasted a nationwide reach, drawing the participation of schools from various corners of the country. As a pivotal component of the program's third round, a select group of 24 schools were given the unique opportunity to showcase their projects at the revered institution. This interaction extended beyond mere presentations, allowing the students to engage directly with distinguished professors from IIT KGP. Furthermore, the attendees were enriched by a comprehensive robotics workshop and an extensive campus tour, affording them firsthand exposure to the expansive academic expanse and state-of-the-art laboratories that distinguish IIT KGP as a leading educational institution in India.`
     },
 

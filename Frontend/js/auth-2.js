@@ -1,94 +1,138 @@
-const switchLoginBtn = document.querySelector("#switch-login-btn");
-const switchSignupBtn = document.querySelector("#switch-signup-btn");
-const signupBox = document.querySelector(".signup-box");
-const loginBox = document.querySelector(".login-box");
-const loginBtn = document.querySelector("#login-btn");
-const signupBtn = document.querySelector("#signup-btn");
+// const switchLoginBtn = document.querySelector("#switch-login-btn");
+// const switchSignupBtn = document.querySelector("#switch-signup-btn");
+// const signupBox = document.querySelector(".signup-box");
+// const loginBox = document.querySelector(".login-box");
+// const loginBtn = document.querySelector("#login-btn");
+// const signupBtn = document.querySelector("#signup-btn");
 
 
-switchSignupBtn.addEventListener("click", () => {
-  signupBox.classList.remove("move-left");
-  loginBox.classList.add("move-right");
-});
+// switchSignupBtn.addEventListener("click", () => {
+//   signupBox.classList.remove("move-left");
+//   loginBox.classList.add("move-right");
+// });
 
-switchLoginBtn.addEventListener("click", () => {
-    signupBox.classList.add("move-left");
-    loginBox.classList.remove("move-right");
-});
-
-
-loginBtn.addEventListener('click', async (ev)=> {
-    ev.preventDefault();
-    console.log("Login button clicked");
-
-    const team = {
-        teamName : document.querySelector("#login-team-name").value,
-        password : document.querySelector("#login-password").value
-
-    }
-    // console.log(team.teamName + "\n" + team.password);
-    try {
-        const response = await fetch('http://localhost:8080/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(team),
-        });
-  
-        const result = await response.text();
-        console.log("response = " + result);
-        if (response.ok){
-          alert('Login successful');
-          error.textContent=""
-        } else {
-          console.log(result)
-          error.textContent = extractErrorMessage(result);
-        }
-      } catch (error) {
-        alert('line 49 : Failed to register. Please try again.');
-        console.log(error);
-      }
-})
+// switchLoginBtn.addEventListener("click", () => {
+//     signupBox.classList.add("move-left");
+//     loginBox.classList.remove("move-right");
+// });
 
 
-signupBtn.addEventListener('click', async (ev)=> {
-    ev.preventDefault();
-    const teamName = document.querySelector("#signup-team-name").value;
-    const password = document.querySelector("#signup-password").value;
-    const confirmPassword = document.querySelector("#confirm-password").value;
-    console.log("Signup button clicked");
-    if(confirmPassword === password){
-        const team = {
-            teamName : document.querySelector("#signup-team-name").value,
-            password : document.querySelector("#signup-password").value,
-        }
-        console.log(team.teamName + "\n" + team.password);
-        try {
-            const response = await fetch('http://localhost:8080/signup', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(team),
-            });
-    
-            const result = await response.text();
-            if (response.ok){
-            alert('Signup successful');
-            // error.textContent=""
-            } else {
-            alert(result)
-            error.textContent = extractErrorMessage(result);
-            }
-        } catch (error) {
-            alert('Failed to signup. Please try again.');
-            console.log(error);
-        }
-    }else{
-        alert('Password and confirm password do not match');
-    }
+// document.getElementById('login-btn').addEventListener('click', async (event) => {
+//   event.preventDefault(); // Prevent form submission
+
+//   // Get values from the input fields
+//   const teamName = document.getElementById('login-team-name').value;
+//   const password = document.getElementById('login-password').value;
+//   const loadingSpinner = document.getElementById('login-loading-spinner'); // Spinner element
+
+//   // Validate the form (simple example)
+//   if (!teamName || !password) {
+//       alert('Please fill in all fields.');
+//       return;
+//   }
+
+//   const loginData = {
+//       team_name: teamName,
+//       password: password
+//   };
+//   console.log(loginData);
+
+//   try {
+//       // Show the loading spinner before making the request
+//       loadingSpinner.style.display = 'block';
+
+//       // Send the request
+//       const response = await fetch('http://localhost:4000/api/v1/team/login', {
+//           method: 'POST',
+//           headers: {
+//               'Content-Type': 'application/json'
+//           },
+//           body: JSON.stringify(loginData)  // Send the data as JSON
+//       });
+
+//       // Hide the loading spinner after receiving the response
+//       loadingSpinner.style.display = 'none';
+
+//       // Handle the response
+//       if (response.ok) {
+//           const data = await response.json();
+//           console.log(data.data.team);
+//           alert('Login successful!');
+          
+//           localStorage.setItem('teamData', JSON.stringify(data?.data?.team)); 
+//           console.log('local storage', localStorage.getItem('teamData'))
+//       }  
+//       else {
+//           const data = await response.json();
+//           console.error(data.message);
+//           alert(data.message);
+//       }
+//   } catch (error) {
+//       console.error(error.response.data.message);
+//       loadingSpinner.style.display = 'none'; // Hide spinner in case of error
+//       alert(error.response.data.message);
+//   }
+// });
 
 
-})
+ 
 
+ 
+// document.getElementById('signup-btn').addEventListener('click', async (event) => {
+//   event.preventDefault(); // Prevent form submission
+
+//   // Get values from the input fields
+//   const teamName = document.getElementById('signup-team-name').value;
+//   const password = document.getElementById('signup-password').value;
+//   const confirmPassword = document.getElementById('confirm-password').value;
+//   const loadingSpinner = document.getElementById('loading-spinner'); // Spinner element
+
+//   // Validate the form (simple example)
+//   if (!teamName || !password || !confirmPassword) {
+//       alert('Please fill in all fields.');
+//       return;
+//   }
+
+//   if (password !== confirmPassword) {
+//       alert('Passwords do not match.');
+//       return;
+//   }
+
+//   const signupData = {
+//       team_name: teamName,
+//       password: password
+//   };
+//   console.log(signupData);
+
+//   try {
+//       // Show the loading spinner before making the request
+//       loadingSpinner.style.display = 'block';
+
+//       // Send the request
+//       const response = await fetch('http://localhost:4000/api/v1/team/register',{
+//           method: 'POST',
+//           headers: {
+//               'Content-Type': 'application/json'
+//           },
+//           body: JSON.stringify(signupData)  // Send the data as JSON
+//       });
+//       const data = await response.json();
+
+//       // Hide the loading spinner after receiving the response
+//       if(!data.status){
+//         alert(data.message);
+//         loadingSpinner.style.display = 'none';
+//       }
+//       else{
+//         console.log(data)
+//       }
+
+//       // Handle the response
+     
+//   } catch (error) {
+//       alert(error); 
+//       console.error('Error during signup:', error);
+//       loadingSpinner.style.display = 'none'; // Hide spinner in case of error
+      
+//   }
+// });

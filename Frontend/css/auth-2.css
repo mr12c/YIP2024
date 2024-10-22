@@ -28,10 +28,11 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: center;
-width: 100vw;
-position: absolute;
-top: 0;
-z-index: 1000;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 /* border-radius: 15px; */
 }
 
@@ -64,20 +65,22 @@ color: #0c139c;
     font-size: 30px;
     text-align: center;
   }
-/* .container {
+.container {
     height: 100vh;
-    width: 100vw;
+    width: 400vw;
     display: flex;
+    position: fixed;
+    top: 0;
     flex-direction: row; 
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    overflow: auto;
-}  */
+    overflow: hidden;
+} 
 
 .auth-box {
-    position: fixed;
-    top: 20%;
+    position: absolute;
+    top: 15%;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(1, 129, 101, 0.762);
@@ -119,7 +122,9 @@ button {
     
 }
 
-
+h3{
+    margin: 5px;
+}
 
 .switch-btn {
     margin: 10px;
@@ -169,7 +174,7 @@ button:hover{
     }
 }
 
-@media  (max-width: 400px) { 
+@media  (max-width: 500px) { 
     .auth-box {
         width: 80vw;
         height: auto;
@@ -191,4 +196,12 @@ button:hover{
     .yip{
         display: none;
       }
+}
+
+
+
+#loading-spinner,#login-loading-spinner {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
 }
