@@ -1,6 +1,6 @@
 
 
-    const teamDataString = localStorage.getItem('teamData');
+const teamDataString = localStorage.getItem('teamData');
   
 // Parse it back into an object
 const teamData = teamDataString ? JSON.parse(teamDataString) : null;
@@ -53,7 +53,7 @@ document.getElementById('login-btn').addEventListener('click', async (event) => 
         // Show the loading spinner before making the request
         loadingSpinner.innerHTML = "Logging.."
         // Send the request
-        const response = await fetch('https://yipserver2-0.vercel.app/api/v1/team/login', {
+        const response = await fetch('https://yipserver2-0.onrender.com/api/v1/team/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

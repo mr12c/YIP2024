@@ -10,7 +10,7 @@ if (!teamData) {
 
 
 document.getElementById('team-name').innerHTML = teamData.name;
-document.getElementById('password').innerHTML = teamData.password;
+// document.getElementById('password').innerHTML = teamData.password;
 
 
 document.getElementById('Logout').addEventListener('click', (e) =>

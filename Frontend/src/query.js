@@ -17,7 +17,7 @@ document.getElementById("queryForm").addEventListener("submit", function (e) {
     spinner.style.display = "block"; // Show the spinner
 
     // Send the request using fetch
-    fetch('https://yipserver2-0.vercel.app/api/v1/mail/sendemail', {
+    fetch('https://yipserver2-0.onrender.com/api/v1/mail/sendemail', {
         method: 'POST', // Using POST method
         headers: {
             'Content-Type': 'application/json', // Set the content type to JSON
